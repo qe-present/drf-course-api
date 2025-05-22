@@ -1,4 +1,3 @@
-from django.http import JsonResponse
 from rest_framework.decorators import api_view
 from rest_framework.generics import get_object_or_404
 from rest_framework.response import Response
@@ -10,7 +9,6 @@ def product_list(request):
     serializer=ProductSerializer(products,many=True)
     return  Response(
         data=serializer.data
-
     )
 @api_view(['GET'])
 def product_detail(request,pk):
