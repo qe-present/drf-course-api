@@ -9,6 +9,7 @@ dependencies = [
     "djangorestframework>=3.15.2",
     "pillow>=11.1.0",
     "django-extensions>=3.2.3",
+    "django-silk>=5.4.1",
 ]
 readme = "README.md"
 requires-python = ">= 3.13"
@@ -20,9 +21,13 @@ build-backend = "hatchling.build"
 [tool.rye]
 managed = true
 dev-dependencies = []
+[tool.rye.scripts]
+dev = "python manage.py runserver"
+auto=""
 
 [tool.hatch.metadata]
 allow-direct-references = true
+
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/drf_course_api"]

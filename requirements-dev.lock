@@ -14,14 +14,20 @@ asgiref==3.8.1
     # via django
 django==5.1.7
     # via django-extensions
+    # via django-silk
     # via djangorestframework
 django-extensions==3.2.3
     # via drf-course-api
+django-silk==5.4.1
+    # via drf-course-api
 djangorestframework==3.15.2
     # via drf-course-api
+gprof2dot==2025.4.14
+    # via django-silk
 pillow==11.1.0
     # via drf-course-api
 sqlparse==0.5.3
     # via django
+    # via django-silk
 tzdata==2025.1
     # via django
