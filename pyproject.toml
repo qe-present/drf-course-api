@@ -23,7 +23,7 @@ managed = true
 dev-dependencies = []
 [tool.rye.scripts]
 dev = "python manage.py runserver"
-auto=""
+auto="gitsync/gitupd.bat"
 
 [tool.hatch.metadata]
 allow-direct-references = true
