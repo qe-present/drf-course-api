@@ -1,0 +1,26 @@
+POST http://localhost:8000/api/token/ HTTP/1.1
+content-type: application/json
+
+{
+    "username": "admin",
+    "password": "test"
+}
+###
+POST http://localhost:8000/api/token/refresh/ HTTP/1.1
+content-type: application/json
+
+{
+  "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc1NTY4Mjc1OCwiaWF0IjoxNzU1NTk2MzU4LCJqdGkiOiJmOTdlOTczZTE3Y2Q0OTY5OGU0MmU4MzM4Njg0ZmU4ZSIsInVzZXJfaWQiOiIxIn0.w238P2yUeT4U8vC6EYoqNmVHuXPFhO34_GnAi3xXt1s"
+}
+
+###
+POST http://localhost:8000/products/ HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU1NDkwNTcyLCJpYXQiOjE3NTU0OTAyNzIsImp0aSI6IjIxODU5MDllNDhjYzQzY2Q5OWE5NzQwZmJiMWJjYmNjIiwidXNlcl9pZCI6IjEifQ.G9Rem838jsmhuHLn5tH_o-n6LZZO8eTznN0C0PCo4pQ
+
+{
+    "name": "New Product",
+    "price": 19.99,
+    "stock": 100
+}
+###

@@ -12,22 +12,54 @@
 -e file:.
 asgiref==3.8.1
     # via django
+attrs==25.3.0
+    # via jsonschema
+    # via referencing
 django==5.1.7
     # via django-extensions
+    # via django-filter
     # via django-silk
     # via djangorestframework
+    # via djangorestframework-simplejwt
+    # via drf-spectacular
 django-extensions==3.2.3
+    # via drf-course-api
+django-filter==25.1
     # via drf-course-api
 django-silk==5.4.1
     # via drf-course-api
 djangorestframework==3.15.2
+    # via djangorestframework-simplejwt
+    # via drf-course-api
+    # via drf-spectacular
+djangorestframework-simplejwt==5.5.1
+    # via drf-course-api
+drf-spectacular==0.28.0
     # via drf-course-api
 gprof2dot==2025.4.14
     # via django-silk
+inflection==0.5.1
+    # via drf-spectacular
+jsonschema==4.25.1
+    # via drf-spectacular
+jsonschema-specifications==2025.4.1
+    # via jsonschema
 pillow==11.1.0
     # via drf-course-api
+pyjwt==2.10.1
+    # via djangorestframework-simplejwt
+pyyaml==6.0.2
+    # via drf-spectacular
+referencing==0.36.2
+    # via jsonschema
+    # via jsonschema-specifications
+rpds-py==0.27.0
+    # via jsonschema
+    # via referencing
 sqlparse==0.5.3
     # via django
     # via django-silk
 tzdata==2025.1
     # via django
+uritemplate==4.2.0
+    # via drf-spectacular
