@@ -1,0 +1,48 @@
+POST http://localhost:8000/api/token/ HTTP/1.1
+content-type: application/json
+
+{
+    "username": "qe",
+    "password": "123456"
+}
+###
+POST http://localhost:8000/api/token/refresh/ HTTP/1.1
+content-type: application/json
+
+{
+  "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc1NjAwODI1MywiaWF0IjoxNzU1OTIxODUzLCJqdGkiOiJiZTJlMDllOTVkMTM0NjkyODIwNTI2MDQ3NjA2NDhiZSIsInVzZXJfaWQiOiIyIn0.Hcx3UGLt7IHI4wegkAD7OBKIzsf_O3KQQGjlBcHxqoc",
+
+}
+
+###
+POST http://localhost:8000/products/ HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU1NDkwNTcyLCJpYXQiOjE3NTU0OTAyNzIsImp0aSI6IjIxODU5MDllNDhjYzQzY2Q5OWE5NzQwZmJiMWJjYmNjIiwidXNlcl9pZCI6IjEifQ.G9Rem838jsmhuHLn5tH_o-n6LZZO8eTznN0C0PCo4pQ
+
+{
+    "name": "New Product",
+    "price": 19.99,
+    "stock": 100
+}
+###
+GET http://localhost:8000/products/1/ HTTP/1.1
+Content-Type: application/json
+
+###
+PUT http://localhost:8000/products/1/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "A Scanner Darklly",
+  "price": "12.99",
+  "stock": 4
+}
+
+###
+DELETE http://localhost:8000/products/1/ HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU1NTk4MzgwLCJpYXQiOjE3NTU1OTgwODAsImp0aSI6IjBlZWQ4NmY1N2E4YjQwNDNiYTdlYzE2MTcyZDc5ODY0IiwidXNlcl9pZCI6IjEifQ.NQf5H9syFf_OMzXPab-9QEypAB3xVmNyxB9fr_w47Ig
+###
+GET http://localhost:8000/orders/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU1OTIyMTc2LCJpYXQiOjE3NTU5MjE4NzYsImp0aSI6IjRkZmUzZTU1ZDViMTQ5OGVhNDA5NDEzODY3YjRhZjcxIiwidXNlcl9pZCI6IjIifQ.-hyRUUyibtqlb8lbSqry1X1zBIDcc8GSBUL2ZF0zCak
+Content-Type: Application/json
