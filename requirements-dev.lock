@@ -24,6 +24,7 @@ colorama==0.4.6
 django==5.1.7
     # via django-extensions
     # via django-filter
+    # via django-redis
     # via django-silk
     # via djangorestframework
     # via djangorestframework-simplejwt
@@ -31,6 +32,8 @@ django==5.1.7
 django-extensions==3.2.3
     # via drf-course-api
 django-filter==25.1
+    # via drf-course-api
+django-redis==6.0.0
     # via drf-course-api
 django-silk==5.4.1
     # via drf-course-api
@@ -44,6 +47,8 @@ drf-spectacular==0.28.0
     # via drf-course-api
 gprof2dot==2025.4.14
     # via django-silk
+hiredis==3.2.1
+    # via redis
 inflection==0.5.1
     # via drf-spectacular
 isort==6.0.1
@@ -66,6 +71,9 @@ pyjwt==2.10.1
     # via djangorestframework-simplejwt
 pyyaml==6.0.2
     # via drf-spectacular
+redis==6.4.0
+    # via django-redis
+    # via drf-course-api
 referencing==0.36.2
     # via jsonschema
     # via jsonschema-specifications
