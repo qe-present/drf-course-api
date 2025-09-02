@@ -17,6 +17,11 @@ dependencies = [
     "black>=25.1.0",
     "redis[hiredis]>=6.4.0",
     "django-redis>=6.0.0",
+    "celery>=5.5.3",
+    "gevent>=25.8.2",
+    "djoser>=2.3.3",
+    "django-cors-headers>=4.7.0",
+    "rest-framework-simplejwt>=0.0.2",
 ]
 readme = "README.md"
 requires-python = ">= 3.13"

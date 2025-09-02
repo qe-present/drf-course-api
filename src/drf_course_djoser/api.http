@@ -1,0 +1,32 @@
+GET http://127.0.0.1:8000/auth/users/me/
+Authorization: Token 56db9235aa2330a9afb76de60857582917f9d07e
+###
+GET http://127.0.0.1:8000/auth/users/me/
+Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU2ODMwNTA4LCJpYXQiOjE3NTY4MzAyMDgsImp0aSI6IjlhNDc1YzcyNTYzZDRkZDc4MWI1OGJkYmRkMDNjOTFiIiwidXNlcl9pZCI6IjEifQ.0bhe8vvKzrcsxdRgy3T8kYfrArdEoiEMVar8cFVyFtQ
+
+###
+POST http://localhost:8000/auth/token/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": 123456
+}
+###
+POST http://127.0.0.1:8000/auth/token/logout/
+Authorization: Token 56db9235aa2330a9afb76de60857582917f9d07e
+###
+POST http://localhost:8000/auth/jwt/create/
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": 123456
+}
+###
+POST http://localhost:8000/auth/jwt/refresh/
+Content-Type: application/json
+
+{
+  "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc1NjkxNjYwOCwiaWF0IjoxNzU2ODMwMjA4LCJqdGkiOiI2ZjA5NDRhYTVjZDU0ZGQxOTZhZTE5MTUwZjU5MjA4MiIsInVzZXJfaWQiOiIxIn0.pAIJM3jQKkLPZfauzsYxJrSNPfsHUBEbCdJ8kOC4fYg"
+}

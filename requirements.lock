@@ -10,25 +10,59 @@
 #   universal: false
 
 -e file:.
+amqp==5.3.1
+    # via kombu
 asgiref==3.8.1
     # via django
+    # via django-cors-headers
 attrs==25.3.0
     # via jsonschema
     # via referencing
+billiard==4.2.1
+    # via celery
 black==25.1.0
     # via drf-course-api
+celery==5.5.3
+    # via drf-course-api
+certifi==2025.8.3
+    # via requests
+cffi==1.17.1
+    # via cryptography
+    # via gevent
+charset-normalizer==3.4.3
+    # via requests
 click==8.2.1
     # via black
+    # via celery
+    # via click-didyoumean
+    # via click-plugins
+    # via click-repl
+click-didyoumean==0.3.1
+    # via celery
+click-plugins==1.1.1.2
+    # via celery
+click-repl==0.3.0
+    # via celery
 colorama==0.4.6
     # via click
+cryptography==45.0.7
+    # via social-auth-core
+defusedxml==0.7.1
+    # via python3-openid
+    # via social-auth-core
 django==5.1.7
+    # via django-cors-headers
     # via django-extensions
     # via django-filter
     # via django-redis
     # via django-silk
     # via djangorestframework
     # via djangorestframework-simplejwt
+    # via djoser
     # via drf-spectacular
+    # via social-auth-app-django
+django-cors-headers==4.7.0
+    # via drf-course-api
 django-extensions==3.2.3
     # via drf-course-api
 django-filter==25.1
@@ -39,16 +73,26 @@ django-silk==5.4.1
     # via drf-course-api
 djangorestframework==3.15.2
     # via djangorestframework-simplejwt
+    # via djoser
     # via drf-course-api
     # via drf-spectacular
 djangorestframework-simplejwt==5.5.1
+    # via djoser
+    # via drf-course-api
+djoser==2.3.3
     # via drf-course-api
 drf-spectacular==0.28.0
     # via drf-course-api
+gevent==25.8.2
+    # via drf-course-api
 gprof2dot==2025.4.14
     # via django-silk
+greenlet==3.2.4
+    # via gevent
 hiredis==3.2.1
     # via redis
+idna==3.10
+    # via requests
 inflection==0.5.1
     # via drf-spectacular
 isort==6.0.1
@@ -57,18 +101,33 @@ jsonschema==4.25.1
     # via drf-spectacular
 jsonschema-specifications==2025.4.1
     # via jsonschema
+kombu==5.5.4
+    # via celery
 mypy-extensions==1.1.0
     # via black
+oauthlib==3.3.1
+    # via requests-oauthlib
+    # via social-auth-core
 packaging==25.0
     # via black
+    # via kombu
 pathspec==0.12.1
     # via black
 pillow==11.1.0
     # via drf-course-api
 platformdirs==4.3.8
     # via black
+prompt-toolkit==3.0.52
+    # via click-repl
+pycparser==2.22
+    # via cffi
 pyjwt==2.10.1
     # via djangorestframework-simplejwt
+    # via social-auth-core
+python-dateutil==2.9.0.post0
+    # via celery
+python3-openid==3.2.0
+    # via social-auth-core
 pyyaml==6.0.2
     # via drf-spectacular
 redis==6.4.0
@@ -77,13 +136,42 @@ redis==6.4.0
 referencing==0.36.2
     # via jsonschema
     # via jsonschema-specifications
+requests==2.32.5
+    # via requests-oauthlib
+    # via social-auth-core
+requests-oauthlib==2.0.0
+    # via social-auth-core
+rest-framework-simplejwt==0.0.2
+    # via drf-course-api
 rpds-py==0.27.0
     # via jsonschema
     # via referencing
+setuptools==80.9.0
+    # via zope-event
+    # via zope-interface
+six==1.17.0
+    # via python-dateutil
+social-auth-app-django==5.5.1
+    # via djoser
+social-auth-core==4.7.0
+    # via social-auth-app-django
 sqlparse==0.5.3
     # via django
     # via django-silk
-tzdata==2025.1
+tzdata==2025.2
     # via django
+    # via kombu
 uritemplate==4.2.0
     # via drf-spectacular
+urllib3==2.5.0
+    # via requests
+vine==5.1.0
+    # via amqp
+    # via celery
+    # via kombu
+wcwidth==0.2.13
+    # via prompt-toolkit
+zope-event==5.1.1
+    # via gevent
+zope-interface==7.2
+    # via gevent
